@@ -1,6 +1,4 @@
-/* ============================= */
-/* GLOBAL RESET */
-/* ============================= */
+
 
 * {
   margin: 0;
@@ -75,7 +73,130 @@ html, body {
 }
 
 /* BUTTONS */
+/* Social Links Container */
+.social-links {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
 
+/* Social Icons Style */
+.social-links a {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f5f5f5;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect (Soft & Elegant) */
+.social-links a:hover {
+    background: #6c63ff;   /* you can change to your theme color */
+    color: #fff;
+    transform: translateY(-4px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .social-links {
+        margin-top: 15px;
+        gap: 14px;
+    }
+
+    .social-links a {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+}
+/* ============================= */
+/* ANIMATIONS */
+/* ============================= */
+
+/* Fade Up Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Left Slide */
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Right Slide */
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply Animations */
+
+/* Hero Left Content */
+.hero-left {
+  animation: slideLeft 1s ease forwards;
+}
+
+/* Hero Right Image */
+.hero-right {
+  animation: slideRight 1s ease forwards;
+}
+
+/* Social Icons */
+.social-links {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+/* Buttons */
+.hero-buttons {
+  animation: fadeUp 1.4s ease forwards;
+}
+
+/* Techstack Section */
+.techstack {
+  animation: fadeUp 1.6s ease forwards;
+}
+
+/* Individual Tech Tags */
+.tech-items span {
+  animation: fadeIn 1.8s ease forwards;
+}
 .hero-buttons {
   margin-top: 30px;
 }
@@ -113,13 +234,11 @@ html, body {
   transform: translateY(-3px);
 }
 
-/* RIGHT SIDE IMAGE */
-
 .hero-right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
+    display: flex;
+    flex-direction: column;   /* THIS makes it go below */
+    align-items: center;
+    margin-right:80px
 }
 
 .image-wrapper {
